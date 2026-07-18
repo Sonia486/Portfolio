@@ -25,6 +25,7 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Projects', path: '/projects' },
   { name: 'Contact', path: '/contact' },
+  { name: 'Resume', path: '/resume-print' },  // ← Resume link added
 ]
 
 export default function Navbar() {
