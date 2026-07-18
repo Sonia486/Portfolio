@@ -28,16 +28,19 @@ export default function ResumePrint() {
       {/* Resume Content */}
       <div className="px-6 md:px-12 pt-8 pb-12 max-w-4xl mx-auto">
         
-        {/* Header */}
-        <div className="text-center border-b-4 border-purple-600 pb-6 mb-8">
+        {/* ✅ HEADER WITH TOP PADDING - Sonia Shehzadi ke upar space */}
+        <div className="text-center border-b-4 border-purple-600 pb-6 mb-8 pt-20 sm:pt-24 md:pt-28">
           <h1 className="text-3xl md:text-5xl font-bold text-purple-700">Sonia Shehzadi</h1>
           <p className="text-lg md:text-xl text-gray-600 mt-2 font-medium">Frontend React Developer</p>
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 mt-4 text-xs md:text-sm text-gray-500">
             <span> soniashehzadi379@gmail.com</span>
+    
             <span> github.com/Sonia486</span>
           </div>
         </div>
 
+        {/* Baaki sab same... */}
+        
         {/* Professional Summary */}
         <div className="mb-6 md:mb-8">
           <h2 className="text-xl md:text-2xl font-bold text-purple-700 border-b-2 border-purple-300 pb-2 mb-3 md:mb-4">
@@ -71,7 +74,7 @@ export default function ResumePrint() {
             </div>
             <div className="bg-purple-50 p-3 rounded-lg border-l-4 border-cyan-500">
               <span className="font-bold text-purple-800 text-sm">Deployment:</span>
-              <span className="text-gray-700 text-sm"> Netlify , REST APIs</span>
+              <span className="text-gray-700 text-sm"> Netlify,  REST APIs</span>
             </div>
           </div>
         </div>
@@ -88,7 +91,7 @@ export default function ResumePrint() {
               <span className="text-xs text-purple-600 bg-purple-100 px-2 py-0.5 rounded-full whitespace-nowrap">Live Project</span>
             </div>
             <p className="text-gray-600 text-xs md:text-sm mb-2">
-              <span className="font-semibold">Tech:</span> React.js | Tailwind CSS | Framer Motion | Node.js | Railway | Netlify
+              <span className="font-semibold">Tech:</span> React.js | Tailwind CSS | Framer Motion | Node.js  | Netlify
             </p>
             <ul className="list-disc ml-4 md:ml-5 text-gray-700 space-y-1 text-sm">
               <li>Space-themed interactive web application with multiple pages</li>
