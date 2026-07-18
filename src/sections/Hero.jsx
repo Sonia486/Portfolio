@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import GlitchText from '../components/GlitchText'
 
 // ========== CUSTOM SVG ICONS ==========
@@ -20,12 +21,6 @@ const MailIcon = ({ className }) => (
   </svg>
 )
 
-const DownloadIcon = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-  </svg>
-)
-
 const ExternalLinkIcon = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
     <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -35,6 +30,12 @@ const ExternalLinkIcon = ({ className }) => (
 const SparklesIcon = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
     <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+  </svg>
+)
+
+const ResumeIcon = ({ className }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
   </svg>
 )
 
@@ -75,17 +76,6 @@ const slideInRight = {
 }
 
 export default function Hero() {
-  // Function to download resume
-  const handleDownloadResume = () => {
-    // Create a temporary anchor element
-    const link = document.createElement('a')
-    link.href = '/resume.pdf'
-    link.download = 'Sonia_Shehzadi_Resume.pdf' // File name when downloaded
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
-
   return (
     <section className="relative min-h-screen flex items-center px-6 pt-24 pb-12 overflow-hidden">
       {/* Background Grid Effect */}
@@ -166,44 +156,51 @@ export default function Hero() {
             user experiences while continuously improving my development skills.
           </motion.p>
 
-          {/* Buttons with Hover Effects */}
+          {/* ========== BUTTONS - ALL USING <Link> ========== */}
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-2">
-            <motion.a
-              href="/projects"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="relative px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl font-poppins font-semibold text-sm flex items-center gap-2 overflow-hidden group"
-            >
-              <motion.span
-                className="absolute inset-0 bg-white/20"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: '100%' }}
-                transition={{ duration: 0.5 }}
-              />
-              <ExternalLinkIcon className="w-4 h-4 relative z-10" />
-              <span className="relative z-10">View Projects</span>
-            </motion.a>
             
-            {/* Download Resume Button - NOW DOWNLOADS FILE */}
-            <motion.button
-              onClick={handleDownloadResume}
+            {/* ✅ View Projects - Using Link */}
+            <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 glass-card rounded-xl font-poppins font-semibold text-sm flex items-center gap-2 hover:border-purple-400/50 transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] cursor-pointer"
             >
-              <DownloadIcon className="w-4 h-4" />
-              Download Resume
-            </motion.button>
+              <Link
+                to="/projects"
+                className="relative px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl font-poppins font-semibold text-sm flex items-center gap-2 overflow-hidden group"
+              >
+                <ExternalLinkIcon className="w-4 h-4 relative z-10" />
+                <span className="relative z-10">View Projects</span>
+              </Link>
+            </motion.div>
             
-            <motion.a
-              href="/contact"
+            {/* ✅ View Resume - Using Link (NEW) */}
+            <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 glass-card rounded-xl font-poppins font-semibold text-sm flex items-center gap-2 hover:border-cyan-400/50 transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.3)]"
             >
-              <MailIcon className="w-4 h-4" />
-              Contact Me
-            </motion.a>
+              <Link
+                to="/resume-print"
+                className="px-8 py-3 glass-card rounded-xl font-poppins font-semibold text-sm flex items-center gap-2 hover:border-purple-400/50 transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]"
+              >
+                <ResumeIcon className="w-4 h-4" />
+                View Resume
+              </Link>
+            </motion.div>
+            
+            {/* ✅ Contact Me - Using Link */}
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                to="/contact"
+                className="px-8 py-3 glass-card rounded-xl font-poppins font-semibold text-sm flex items-center gap-2 hover:border-cyan-400/50 transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.3)]"
+              >
+                <MailIcon className="w-4 h-4" />
+                Contact Me
+              </Link>
+            </motion.div>
+            
           </motion.div>
 
           {/* Social Icons with Bounce Effect */}
@@ -314,14 +311,6 @@ export default function Hero() {
               style={{
                 top: item.top,
                 left: item.left,
-              }}
-              animate={{
-                y: [0, -15, 0],
-                x: [0, Math.sin(i) * 8, 0],
-              }}
-              transition={{
-                y: { duration: 3 + i, repeat: Infinity, ease: 'easeInOut' },
-                x: { duration: 4 + i, repeat: Infinity, ease: 'easeInOut' },
               }}
             >
               {'</>'} {item.tech}
