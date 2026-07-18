@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
+import ResumePrint from './pages/ResumePrint'  // ← YEH ADD KARO
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/resume-print" element={<ResumePrint />} />  // ← YEH ADD KARO
       </Routes>
       <Footer />
     </div>

@@ -61,3 +61,34 @@
   background: #7c3aed;
   border-radius: 4px;
 }
+/* ===== PRINT STYLES ===== */
+@media print {
+  @page {
+    margin: 0;
+    size: auto;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  /* Background colors print karo */
+  .bg-purple-50 {
+    background-color: #faf5ff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .bg-gray-50 {
+    background-color: #f9fafb !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
