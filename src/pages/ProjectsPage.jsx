@@ -32,6 +32,15 @@ const projects = [
   },
   {
     id: 2,
+    name: 'AURELIA',
+    tech: 'React + Vite + Tailwind + GSAP',
+    description: 'Cinematic luxury resort & private retreat website featuring glassmorphism UI, scroll-based animations, 3D hover effects, interactive room booking, animated gallery with lightbox, and responsive design.',
+    github: 'https://github.com/Sonia486',
+    live: 'https://lnkd.in/dz5gqJp5',
+    color: 'from-amber-500 to-rose-500',
+  },
+  {
+    id: 3,
     name: 'Student Study Hub',
     tech: 'React',
     description: 'Educational platform for students with modern UI and responsive design.',
@@ -40,7 +49,7 @@ const projects = [
     color: 'from-pink-500 to-purple-500',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Portfolio Website',
     tech: 'React + Framer Motion',
     description: 'Personal developer portfolio with smooth animations, dark theme, and responsive design.',
@@ -49,7 +58,7 @@ const projects = [
     color: 'from-cyan-500 to-blue-500',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Mini Project',
     tech: 'JavaScript',
     description: 'Interactive JavaScript application showcasing DOM manipulation and modern ES6+ features.',
@@ -58,7 +67,7 @@ const projects = [
     color: 'from-yellow-500 to-orange-500',
   },
   {
-    id: 5,
+    id: 6,
     name: 'CV / Resume',
     tech: 'HTML + CSS',
     description: 'Professional CV built with pure HTML and CSS, fully responsive and print-friendly.',
