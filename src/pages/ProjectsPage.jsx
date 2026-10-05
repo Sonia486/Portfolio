@@ -32,6 +32,15 @@ const projects = [
   },
   {
     id: 2,
+    name: 'Brain Tumor AI',
+    tech: 'Python + Streamlit + AI/ML',
+    description: 'AI-powered app that scans MRI images and detects brain tumors with deep learning.',
+    github: 'https://github.com/Sonia486',
+    live: 'https://sonia-brain-tumor-ai.streamlit.app/',
+    color: 'from-teal-500 to-cyan-500',
+  },
+  {
+    id: 3,
     name: 'AURELIA',
     tech: 'React + Vite + Tailwind + GSAP',
     description: 'Cinematic luxury resort & private retreat website featuring glassmorphism UI, scroll-based animations, 3D hover effects, interactive room booking, animated gallery with lightbox, and responsive design.',
@@ -40,7 +49,7 @@ const projects = [
     color: 'from-amber-500 to-rose-500',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Student Study Hub',
     tech: 'React',
     description: 'Educational platform for students with modern UI and responsive design.',
@@ -49,7 +58,16 @@ const projects = [
     color: 'from-pink-500 to-purple-500',
   },
   {
-    id: 4,
+    id: 5,
+    name: 'Motovera',
+    tech: 'React + 3D',
+    description: '3D motorcycle showcase website built with React, featuring immersive visuals and interactive experience.',
+    github: 'https://github.com/Sonia486',
+    live: 'https://motovera-3d-motorcycle.netlify.app/',
+    color: 'from-orange-500 to-red-500',
+  },
+  {
+    id: 6,
     name: 'Portfolio Website',
     tech: 'React + Framer Motion',
     description: 'Personal developer portfolio with smooth animations, dark theme, and responsive design.',
@@ -58,7 +76,7 @@ const projects = [
     color: 'from-cyan-500 to-blue-500',
   },
   {
-    id: 5,
+    id: 7,
     name: 'Mini Project',
     tech: 'JavaScript',
     description: 'Interactive JavaScript application showcasing DOM manipulation and modern ES6+ features.',
@@ -67,7 +85,7 @@ const projects = [
     color: 'from-yellow-500 to-orange-500',
   },
   {
-    id: 6,
+    id: 8,
     name: 'CV / Resume',
     tech: 'HTML + CSS',
     description: 'Professional CV built with pure HTML and CSS, fully responsive and print-friendly.',
